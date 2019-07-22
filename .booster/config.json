@@ -1,0 +1,7 @@
+{
+    "root": "src/",
+    "Provider": "Providers/",
+    "Module": "Modules/",
+    "Route": "Routes/",
+    "Interface": "Interface/"
+}
