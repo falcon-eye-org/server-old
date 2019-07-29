@@ -1,0 +1,23 @@
+{
+    "verbose": true,
+    "debug": false,
+    "exec": "node --inspect=0.0.0.0:9299 -r ts-node/register ./src/app.ts",
+    "ignore": [
+        "node_modules",
+        "./test",
+        "**/*.d.ts",
+        "*.test.ts",
+        "*.spec.ts",
+        "fixtures/*",
+        "test/**/*",
+        "docs/*"
+    ],
+    "events": {
+        "restart": "echo \"[Warning] Remember run npm run test b4 push to dev branch !\""
+    },
+    "watch": [
+        "./src"
+    ],
+    "ext": "ts",
+    "inspect": true
+}
