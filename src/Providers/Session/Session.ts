@@ -50,7 +50,7 @@ export class SessionProvider {
         return new Promise((resolve, reject) => {
             jwt.verify(token, this.key, {}, (error, decoded: ISession) => {
                 if (error)
-                    reject(this.error.createError('Session', '', undefined, error));
+                    reject(this.error.createError('Session', '02', undefined, error));
                 else
                     resolve(decoded);
             });
