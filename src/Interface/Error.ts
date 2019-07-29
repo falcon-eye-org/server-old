@@ -16,5 +16,6 @@ export interface IError {
 
 export const errorList = {
     "00": "No Error",
-    "01": "Invalid API Key"
+    "01": "Invalid API Key",
+    "02": "Authentification failed"
 };
