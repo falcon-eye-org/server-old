@@ -12,6 +12,6 @@ export interface IConfig {
 }
 
 export const defaultConfig: IConfig = {
-    API_KEY: "",
+    API_KEY: "KEY",
     JWT_KEY: "secret"
 };
