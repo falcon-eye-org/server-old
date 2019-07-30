@@ -34,4 +34,26 @@ describe("Log an Event", () => {
             expect(res.body.code).toBe("00");
         });
     });
+
+    it("Should receive multiple event", () => {
+
+        request.post(`${baseUrl}/event`)
+        .set('Authorization', session)
+        .send({
+            event: [{
+                type: "event1.1",
+                version: "1.0.0"
+            },
+            // tslint:disable-next-line: align
+            {
+                type: "event1.2",
+                version: "1.0.0"
+            }]
+        })
+        .end((err, res) => {
+            if (err) throw err;
+
+            expect(res.body.code).toBe("00");
+        });
+    });
 });

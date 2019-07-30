@@ -39,6 +39,8 @@ export class EventsRoute {
 
         this.session.checkSession(token)
         .then((session) => {
+            if (Array.isArray(event))
+                return this.eventLogger.logEvents(session, event);
             return this.eventLogger.logEvent(session, event);
         })
         .then(() => {
